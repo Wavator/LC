@@ -24,7 +24,7 @@ public:
         }
         return ans;
     }
-}s;
+};
 
 //int main() {
 //    cout << s.lengthOfLongestSubstring("abcabcbb") << endl;
