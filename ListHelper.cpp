@@ -18,12 +18,14 @@ ListNode* generate(vector<int> x) {
     return hd;
 }
 
-void print_list(ListNode* x) {
+void print_list(ListNode* x, ListNode *y = NULL, bool printy = false) {
     cout << "------------------------------\n";
-    while (x) {
+    while (x != y) {
         cout << x->val << ' ';
         x = x->next;
     }
+    if (printy) {
+        cout << y->val << ' ';
+    }
     cout << "\n------------------------------\n";
 }
-
