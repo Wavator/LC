@@ -4,10 +4,10 @@
 
 class Solution {
 public:
-    unordered_map<int, int> dp;
+    unordered_map<int, int> dp {{1, 0}};
 
     int dfs(int x) {
-        if (dp[x] || x <= 1)
+        if (dp[x])
             return dp[x];
         return dp[x] = 1 + (x & 1? dfs(3 * x + 1): dfs(x >> 1));
     }
